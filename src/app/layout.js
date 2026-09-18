@@ -13,6 +13,26 @@ const geistMono = Geist_Mono({
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://devemmanuel.com";
 
+// Organization Schema
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Dev Emmanuel",
+  "url": SITE_URL,
+  "description": "Frontend developer specializing in React, Next.js, and modern web development",
+  "image": "https://devemmanuel.com/og-image.jpg",
+  "sameAs": [
+    "https://github.com/Nuelz1",
+    "https://linkedin.com/in/osho-emmanuel",
+    "https://twitter.com/yourhandle"
+  ],
+  "contact": {
+    "@type": "ContactPoint",
+    "email": "oshoemmanuel3@gmail.com",
+    "contactType": "Customer Service"
+  }
+};
+
 export const metadata = {
   title: "Dev Emmanuel | React/Next.js Frontend Developer",
   description: "Frontend developer specializing in React, Next.js, and modern web development. Building high-performance, SEO-optimized applications.",
@@ -48,6 +68,10 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
       </head>
       <body
         className={`${geist.variable} ${geistMono.variable} antialiased`}

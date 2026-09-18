@@ -1,6 +1,31 @@
+// WebPage Schema
+const webpageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Dev Emmanuel | Frontend Developer Portfolio",
+  "description": "Personal portfolio of Dev Emmanuel, a React/Next.js frontend developer specializing in high-performance web applications.",
+  "url": "https://devemmanuel.com",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Dev Emmanuel",
+    "jobTitle": "Frontend Developer",
+    "url": "https://devemmanuel.com",
+    "image": "https://devemmanuel.com/profile.jpg",
+    "sameAs": [
+      "https://github.com/Nuelz1",
+      "https://linkedin.com/in/osho-emmanuel"
+    ]
+  }
+};
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 text-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(webpageSchema) }}
+      />
+      
       {/* Navigation */}
       <nav className="flex justify-between items-center p-6 max-w-6xl mx-auto">
         <h1 className="text-2xl font-bold">Dev Emmanuel</h1>
@@ -18,8 +43,8 @@ export default function Home() {
             React/Next.js Frontend Developer
           </h2>
           <p className="text-xl text-slate-300 mb-8 max-w-2xl">
-            Building high-performance, SEO-optimized web applications. 
-            Specializing in React, Next.js, and modern web technologies.
+            Building high-performance, SEO-optimized web applications. Specializing in 
+            React, Next.js, and modern web technologies.
           </p>
           <div className="flex gap-4 justify-center">
             <a 
@@ -102,11 +127,11 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="border-t border-slate-700 py-8 px-6 text-center text-slate-400">
-        <p>&copy; 2026 Dev Emmanuel. All rights reserved.</p>
+        <p>&copy; 2024 Dev Emmanuel. All rights reserved.</p>
         <div className="mt-4 flex gap-6 justify-center">
           <a href="https://github.com/Nuelz1" target="_blank" className="hover:text-white">GitHub</a>
           <a href="https://linkedin.com/in/osho-emmanuel" target="_blank" className="hover:text-white">LinkedIn</a>
-          <a href="https://twitter.com/nuelz1007" target="_blank" className="hover:text-white">Twitter</a>
+          <a href="https://twitter.com/yourhandle" target="_blank" className="hover:text-white">Twitter</a>
         </div>
       </footer>
     </main>
