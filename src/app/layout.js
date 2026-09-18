@@ -11,14 +11,19 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// SEO METADATA - WEEK 1 LEARNING
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://devemmanuel.com";
+
 export const metadata = {
   title: "Dev Emmanuel | React/Next.js Frontend Developer",
   description: "Frontend developer specializing in React, Next.js, and modern web development. Building high-performance, SEO-optimized applications.",
+  metadataBase: new URL(SITE_URL),
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Dev Emmanuel | React/Next.js Developer",
     description: "Building beautiful, high-performance web applications with React and Next.js.",
-    url: "https://devemmanuel.com",
+    url: SITE_URL,
     type: "website",
     images: [
       {
@@ -33,7 +38,7 @@ export const metadata = {
     card: "summary_large_image",
     title: "Dev Emmanuel | React/Next.js Developer",
     description: "Building beautiful, high-performance web applications.",
-    creator: "@nuelz1007",
+    creator: "@yourhandle",
   },
 };
 
@@ -43,7 +48,6 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="canonical" href="https://devemmanuel.com" />
       </head>
       <body
         className={`${geist.variable} ${geistMono.variable} antialiased`}
