@@ -1,3 +1,6 @@
+import Breadcrumb from './components/Breadcrumb';
+
+
 // WebPage Schema
 const webpageSchema = {
   "@context": "https://schema.org",
@@ -25,6 +28,7 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webpageSchema) }}
       />
+      <Breadcrumb currentPage="Home" />
       
       {/* Navigation */}
       <nav className="flex justify-between items-center p-6 max-w-6xl mx-auto">
