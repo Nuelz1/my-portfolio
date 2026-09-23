@@ -1,24 +1,32 @@
 import Breadcrumb from './components/Breadcrumb';
 
 
-// WebPage Schema
-const webpageSchema = {
+// Schema.org Structured Data
+const jsonLdSchema = {
   "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Dev Emmanuel | Frontend Developer Portfolio",
-  "description": "Personal portfolio of Dev Emmanuel, a React/Next.js frontend developer specializing in high-performance web applications.",
-  "url": "https://devemmanuel.com",
-  "mainEntity": {
-    "@type": "Person",
-    "name": "Dev Emmanuel",
-    "jobTitle": "Frontend Developer",
-    "url": "https://devemmanuel.com",
-    "image": "https://devemmanuel.com/profile.jpg",
-    "sameAs": [
-      "https://github.com/Nuelz1",
-      "https://linkedin.com/in/osho-emmanuel"
-    ]
-  }
+  "@graph": [
+    {
+      "@type": "Person",
+      "@id": "https://devemmanuel.com/#person",
+      "name": "Dev Emmanuel",
+      "jobTitle": "Frontend Developer",
+      "url": "https://devemmanuel.com",
+      "image": "https://devemmanuel.com/profile.jpg",
+      "sameAs": [
+        "https://github.com/Nuelz1",
+        "https://linkedin.com/in/osho-emmanuel"
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://devemmanuel.com/#webpage",
+      "url": "https://devemmanuel.com",
+      "name": "Dev Emmanuel | Frontend Developer Portfolio",
+      "description": "Personal portfolio of Dev Emmanuel, a React/Next.js frontend developer specializing in high-performance web applications.",
+      "about": { "@id": "https://devemmanuel.com/#person" },
+      "mainEntity": { "@id": "https://devemmanuel.com/#person" }
+    }
+  ]
 };
 
 export default function Home() {
@@ -26,7 +34,7 @@ export default function Home() {
     <main className="min-h-screen bg-gradient-to-br from-slate-900 to-slate-800 text-white">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webpageSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdSchema) }}
       />
       <Breadcrumb currentPage="Home" />
       
