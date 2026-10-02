@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink } from 'lucide-react';
+import Image from 'next/image';
 
 const categories = ['All', 'Next.js', 'React', 'Full Stack'];
 
@@ -13,9 +14,9 @@ const projects = [
     category: 'Next.js',
     description: 'A developer performance dashboard built with Next.js App Router, Tailwind CSS, and Recharts.',
     tags: ['Next.js', 'Tailwind CSS', 'Recharts'],
-    image: '/project1.jpg',
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com/Nuelz1',
+    image: '/ALX-Capstone-Project-DevScope.jpeg',
+    liveUrl: 'https://alx-capstone-project-dev-scope.vercel.app/',
+    githubUrl: 'https://github.com/Nuelz1/ALX-Capstone-Project-DevScope',
   },
   {
     id: 2,
@@ -23,9 +24,9 @@ const projects = [
     category: 'React',
     description: 'An interactive portfolio app for photographers with instant client previews and image gallery filtering.',
     tags: ['React', 'Framer Motion', 'Tailwind CSS'],
-    image: '/project2.jpg',
-    liveUrl: 'https://example.com',
-    githubUrl: 'https://github.com/Nuelz1',
+    image: '',
+    liveUrl: '',
+    githubUrl: 'https://github.com/Nuelz1/fotobook',
   },
   {
     id: 3,
@@ -33,7 +34,7 @@ const projects = [
     category: 'Full Stack',
     description: 'Full-stack platform with dynamic checkout, product inventory management, and database integration.',
     tags: ['Next.js', 'Node.js', 'MongoDB', 'Tailwind'],
-    image: '/project3.jpg',
+    image: '',
     liveUrl: 'https://example.com',
     githubUrl: 'https://github.com/Nuelz1',
   },
@@ -56,7 +57,7 @@ export default function Portfolio() {
     : projects.filter((p) => p.category === activeCategory);
 
   return (
-    <section id="portfolio" className="py-20 md:py-28 bg-white text-slate-900 px-4 sm:px-6 lg:px-8">
+    <section id="portfolio" className="scroll-mt-24 py-20 md:py-28 bg-white text-slate-900 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         
         {/* Section Header */}
@@ -109,6 +110,7 @@ export default function Portfolio() {
                 {/* Image / Thumbnail Section */}
                 <div className="relative aspect-16/10 bg-slate-200 overflow-hidden">
                   <div className="absolute inset-0 bg-slate-900/40 opacity-0 group-hover:opacity-100 transition-opacity z-10 flex items-center justify-center gap-3 backdrop-blur-[2px]">
+                    {project.liveUrl && (
                     <a
                       href={project.liveUrl}
                       target="_blank"
@@ -118,6 +120,7 @@ export default function Portfolio() {
                     >
                       <ExternalLink className="w-4 h-4" />
                     </a>
+            )}
                     <a
                       href={project.githubUrl}
                       target="_blank"
@@ -128,10 +131,23 @@ export default function Portfolio() {
                       <GithubIcon className="w-4 h-4" />
                     </a>
                   </div>
-                  <div className="w-full h-full bg-slate-800 flex items-center justify-center text-slate-400 group-hover:scale-105 transition-transform duration-500">
-                    {/* Visual placeholder until images are added */}
-                    <span className="text-sm font-semibold text-slate-300">{project.title} Preview</span>
+
+                  {project.image ? (
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} project preview`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  ) : (
+                    <div className="w-full h-full bg-slate-800 flex items-center justify-center text-slate-400 group-hover:scale-105 transition-transform duration-500">
+                    <span className="text-sm font-semibold text-slate-300">
+                      {project.title} Preview
+                    </span>
                   </div>
+
+                  )}
+
                 </div>
 
                 {/* Content Section */}

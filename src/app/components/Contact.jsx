@@ -29,26 +29,43 @@ export default function Contact() {
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (e) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setIsSubmitting(true);
+    setError('');
 
-    // Simulate form submission delay
-    setTimeout(() => {
-      setIsSubmitting(false);
+    try {
+      const response = await fetch('https://formspree.io/f/mwlpjael', {
+        method: 'POST',
+        headers: { 
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+         },
+        body: JSON.stringify(formData),
+      });
+      
+      if (!response.ok) {
+        throw new Error('Failed to submit form. Please try again.');
+      }
+
       setSubmitted(true);
       setFormData({ name: '', email: '', subject: '', message: '' });
-      setTimeout(() => setSubmitted(false), 5000);
-    }, 1200);
+    
+    } catch (error) {
+      setError(error.message || 'An unexpected error occurred. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
-    <section id="contact" className="py-20 md:py-28 bg-white text-slate-900 px-4 sm:px-6 lg:px-8">
+    <section id="contact" className="scroll-mt-24 py-20 md:py-28 bg-white text-slate-900 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
         
         {/* Section Header */}

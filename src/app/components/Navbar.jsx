@@ -93,7 +93,7 @@ export default function Navbar() {
             <GithubIcon className="w-4 h-4" />
           </a>
           <a 
-            href="https://x.com" 
+            href="https://x.com/nuelofficial6" 
             target="_blank" 
             rel="noreferrer" 
             className="p-1.5 hover:text-orange-500 transition-colors"
@@ -151,7 +151,7 @@ export default function Navbar() {
               <a href="https://github.com/Nuelz1" target="_blank" rel="noreferrer" className="hover:text-orange-500">
                 <GithubIcon className="w-5 h-5" />
               </a>
-              <a href="https://x.com" target="_blank" rel="noreferrer" className="hover:text-orange-500">
+              <a href="https://x.com/nuelofficial6" target="_blank" rel="noreferrer" className="hover:text-orange-500">
                 <TwitterIcon className="w-5 h-5" />
               </a>
               <a href="https://linkedin.com" target="_blank" rel="noreferrer" className="hover:text-orange-500">

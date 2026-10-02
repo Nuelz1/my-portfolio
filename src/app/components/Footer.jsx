@@ -58,7 +58,7 @@ export default function Footer() {
             <GithubIcon className="w-5 h-5" />
           </a>
           <a
-            href="https://x.com"
+            href="https://x.com/nuelofficial6"
             target="_blank"
             rel="noreferrer"
             className="p-2 rounded-full hover:bg-slate-800 hover:text-white transition-colors"

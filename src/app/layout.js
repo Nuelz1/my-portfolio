@@ -1,10 +1,11 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
+import { SITE_URL } from '@/lib/site';
 
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata = {
-  metadataBase: new URL('https://devemmanuel.dev'),
+  metadataBase: new URL(SITE_URL),
   title: {
     default: 'Dev Emmanuel | React & Next.js Frontend Developer',
     template: '%s | Dev Emmanuel',
@@ -15,12 +16,12 @@ export const metadata = {
   authors: [{ name: 'Dev Emmanuel' }],
   creator: 'Dev Emmanuel',
   alternates: {
-    canonical: 'https://devemmanuel.dev',
+    canonical: SITE_URL,
   },
   openGraph: {
     title: 'Dev Emmanuel | React & Next.js Frontend Developer',
     description: 'Building high-performance, interactive web applications with React and Next.js.',
-    url: 'https://devemmanuel.dev',
+    url: SITE_URL,
     siteName: 'Dev Emmanuel Portfolio',
     images: [
       {
@@ -38,7 +39,7 @@ export const metadata = {
     title: 'Dev Emmanuel | React & Next.js Frontend Developer',
     description: 'Building high-performance, interactive web applications with React and Next.js.',
     images: ['/og-image.jpg'],
-    creator: '@yourhandle',
+    creator: '@nuelofficial6',
   },
   robots: {
     index: true,
@@ -51,12 +52,11 @@ export default function RootLayout({ children }) {
     '@context': 'https://schema.org',
     '@type': 'Person',
     name: 'Dev Emmanuel',
-    url: 'https://devemmanuel.dev',
+    url: SITE_URL,
     jobTitle: 'Frontend Developer',
     sameAs: [
       'https://github.com/Nuelz1',
-      'https://twitter.com/yourhandle',
-      'https://linkedin.com/in/yourprofile',
+      'https://x.com/nuelofficial6',
     ],
     knowsAbout: ['React', 'Next.js', 'JavaScript', 'Tailwind CSS', 'Web Performance'],
   };

@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
-    <section className="min-h-screen bg-slate-50 text-slate-900 pt-32 pb-16 px-6 relative overflow-hidden">
+    <section id="home" className="scroll-mt-24 min-h-screen bg-slate-50 text-slate-900 pt-32 pb-16 px-6 relative overflow-hidden">
       <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         
         {/* Left Column - Your Content & Copy */}
@@ -30,7 +30,7 @@ export default function Hero() {
           {/* CTAs */}
           <div className="flex flex-wrap gap-4 pt-2">
             <a 
-              href="#projects" 
+              href="#portfolio" 
               className="px-6 py-3 rounded-full bg-blue-600 hover:bg-blue-700 text-white font-medium shadow-md shadow-blue-500/20 transition"
             >
               Explore Projects
