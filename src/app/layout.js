@@ -25,7 +25,7 @@ export const metadata = {
     siteName: 'Dev Emmanuel Portfolio',
     images: [
       {
-        url: '/og-image.jpg',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Dev Emmanuel Portfolio',
@@ -38,7 +38,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'Dev Emmanuel | React & Next.js Frontend Developer',
     description: 'Building high-performance, interactive web applications with React and Next.js.',
-    images: ['/og-image.jpg'],
+    images: ['/og-image.png'],
     creator: '@nuelofficial6',
   },
   robots: {
