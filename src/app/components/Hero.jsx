@@ -44,19 +44,25 @@ export default function Hero() {
           </div>
 
           {/* Your Authentic Metrics */}
-          <div className="grid grid-cols-3 gap-6 pt-8 border-t border-slate-200 max-w-md">
-            <div>
-              <h3 className="text-3xl font-extrabold text-slate-900">3+</h3>
-              <p className="text-xs text-slate-500 font-medium uppercase tracking-wider mt-1">Full-Stack & Frontend Apps</p>
-            </div>
-            <div>
-              <h3 className="text-3xl font-extrabold text-slate-900">100%</h3>
-              <p className="text-xs text-slate-500 font-medium uppercase tracking-wider mt-1">Responsive Design</p>
-            </div>
-            <div>
-              <h3 className="text-3xl font-extrabold text-slate-900">Next.js</h3>
-              <p className="text-xs text-slate-500 font-medium uppercase tracking-wider mt-1">Primary Framework</p>
-            </div>
+          <div>
+            <h3 className="text-3xl font-extrabold text-slate-900">3+</h3>
+            <p className="text-xs text-slate-500 font-medium uppercase tracking-wider mt-1">
+              Frontend & Full-Stack Apps
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-3xl font-extrabold text-slate-900">Responsive</h3>
+            <p className="text-xs text-slate-500 font-medium uppercase tracking-wider mt-1">
+              Mobile-First Interfaces
+            </p>
+          </div>
+
+          <div>
+            <h3 className="text-3xl font-extrabold text-slate-900">Next.js</h3>
+            <p className="text-xs text-slate-500 font-medium uppercase tracking-wider mt-1">
+              Primary Framework
+            </p>
           </div>
         </motion.div>
 

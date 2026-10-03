@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { CheckCircle2, User, Mail, Phone, MapPin } from 'lucide-react';
+import Image from 'next/image';
 
 const highlights = [
   'Skilled in HTML, CSS, JavaScript, Tailwind CSS, and Next.js.',
@@ -50,9 +51,10 @@ export default function About() {
           >
             <div className="relative rounded-3xl overflow-hidden bg-slate-100 border border-slate-200 shadow-xl aspect-4/5 flex items-center justify-center group">
               {/* Image Placeholder or Actual Headshot */}
-              <img
+              <Image
                 src="/hero-bg.jpg" // Path to your photo in public folder
                 alt="Dev Emmanuel"
+                fill
                 className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-slate-900/60 via-transparent to-transparent" />

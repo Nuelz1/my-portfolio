@@ -1,7 +1,7 @@
 'use client';
 
 import { ArrowUp } from 'lucide-react';
-import { GithubIcon, TwitterIcon, LinkedinIcon } from './icons';
+import { GithubIcon, TwitterIcon } from './icons';
 
 
 
@@ -42,15 +42,7 @@ export default function Footer() {
           >
             <TwitterIcon className="w-5 h-5" />
           </a>
-          <a
-            href="https://linkedin.com"
-            target="_blank"
-            rel="noreferrer"
-            className="p-2 rounded-full hover:bg-slate-800 hover:text-white transition-colors"
-            aria-label="LinkedIn Profile"
-          >
-            <LinkedinIcon className="w-5 h-5" />
-          </a>
+          
         </div>
 
         {/* Scroll Back To Top Button */}
