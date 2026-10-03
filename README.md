@@ -1,36 +1,211 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Dev Emmanuel — Developer Portfolio
+
+A modern, responsive developer portfolio built with **Next.js**, **React**, and **Tailwind CSS**. The portfolio showcases my frontend projects, technical skills, experience, and provides a working contact form for professional inquiries.
+
+## Live Site
+
+**Portfolio:**
+https://my-portfolio-bay-ten-k9njsdp3a9.vercel.app
+
+## About the Project
+
+This portfolio was built to serve as a professional online presence and demonstrate practical frontend development skills.
+
+The project focuses on:
+
+* Responsive and accessible interfaces
+* Component-based React development
+* Modern Next.js architecture
+* Performance and SEO
+* Reusable components
+* Clean project structure
+* Real-world form handling
+* Responsive navigation and interactions
+
+## Tech Stack
+
+* **Next.js** — React framework and application architecture
+* **React** — Component-based UI development
+* **JavaScript** — Application logic and interactivity
+* **Tailwind CSS** — Styling and responsive design
+* **Framer Motion** — Animations and transitions
+* **Lucide React** — Interface icons
+* **Formspree** — Contact form submission
+* **Vercel** — Deployment and hosting
+
+## Features
+
+### Responsive Design
+
+The portfolio is designed to work across desktop, tablet, and mobile screen sizes.
+
+### Project Showcase
+
+Projects are presented with:
+
+* Project previews
+* Technology information
+* Project descriptions
+* GitHub links where available
+* Live demo links where available
+
+### Working Contact Form
+
+The contact form uses Formspree to handle submissions and provides loading, success, and error states.
+
+### SEO
+
+The application includes:
+
+* Page metadata
+* Canonical URL
+* Open Graph metadata
+* Twitter Card metadata
+* JSON-LD structured data
+* `robots.txt`
+* `sitemap.xml`
+
+### Social Links
+
+The portfolio includes links to my:
+
+* GitHub
+* X
+
+## Featured Projects
+
+### DevScope
+
+A GitHub Developer Intelligence Dashboard built with React. The application allows users to search GitHub developers and explore profile information, repositories, and development statistics.
+
+**Technologies:** React, JavaScript, Tailwind CSS, GitHub API
+
+### FotoBook
+
+A responsive photography-focused web application demonstrating modern frontend interface development.
+
+**Technologies:** Next.js, React, Tailwind CSS
+
+### FOKiiS
+
+A modern web interface built to demonstrate responsive layouts, reusable components, and frontend development practices.
+
+**Technologies:** Next.js, React, Tailwind CSS
 
 ## Getting Started
 
-First, run the development server:
+### Prerequisites
+
+Make sure you have the following installed:
+
+* Node.js
+* npm
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/Nuelz1/my-portfolio.git
+```
+
+Navigate into the project:
+
+```bash
+cd my-portfolio
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```text
+http://localhost:3000
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Available Scripts
 
-## Learn More
+### Development
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+npm run dev
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Starts the development server.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### Lint
 
-## Deploy on Vercel
+```bash
+npm run lint
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Runs ESLint to check the project for code-quality issues.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Production Build
+
+```bash
+npm run build
+```
+
+Creates an optimized production build.
+
+### Production Server
+
+```bash
+npm run start
+```
+
+Starts the application using the production build.
+
+## Project Structure
+
+```text
+my-portfolio/
+├── app/
+│   ├── components/
+│   ├── globals.css
+│   ├── layout.js
+│   ├── page.js
+│   ├── robots.js
+│   └── sitemap.js
+├── lib/
+│   └── site.js
+├── public/
+│   ├── og-image.png
+│   ├── project1.jpg
+│   ├── project2.jpg
+│   ├── project3.jpg
+│   └── ...
+├── next.config.mjs
+├── package.json
+└── README.md
+```
+
+## Deployment
+
+The portfolio is deployed using Vercel.
+
+Production URL:
+
+https://my-portfolio-bay-ten-k9njsdp3a9.vercel.app
+
+The project can be deployed by connecting the GitHub repository to Vercel and allowing Vercel to build and deploy the Next.js application.
+
+## Author
+
+**Dev Emmanuel**
+
+Frontend Developer specializing in React and Next.js.
+
+* GitHub: https://github.com/Nuelz1
+* X: https://x.com/nuelofficial6
